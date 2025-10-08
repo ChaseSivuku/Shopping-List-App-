@@ -1,0 +1,23 @@
+{
+    "users": [
+        {
+        "id": 1,
+        "name": "Alice",
+        "surname": "Smith",
+        "email": "alice@gmail.com",
+        "cell": "0829999999",
+        "password": "alice123",
+        "lists": [[{
+            "name": "groceries",
+            "quantity": 3,
+            "notes": "Get these by the end of the week",
+            "items": [
+                {
+                    "image": "url",
+                    "name": "apple"
+                }
+            ]
+        }]]
+    }
+]
+}
