@@ -2,6 +2,6 @@ import React from 'react'
 
 export const addList = () => {
   return (
-    <div>Add-list</div>
+    <div><h1>Add List</h1></div>
   )
 }

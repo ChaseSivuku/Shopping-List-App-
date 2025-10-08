@@ -6,18 +6,32 @@
         "surname": "Smith",
         "email": "alice@gmail.com",
         "cell": "0829999999",
+        "passwordHash": "$2a$10$...",
         "password": "alice123",
-        "lists": [[{
-            "name": "groceries",
-            "quantity": 3,
-            "notes": "Get these by the end of the week",
-            "items": [
-                {
-                    "image": "url",
-                    "name": "apple"
-                }
-            ]
-        }]]
+        "createdAt": "2025-10-08T09:00:00Z"
+    }
+],
+"lists": [
+    {
+        "id": 1,
+        "userId": 1,
+        "category": "groceries",
+        "name": "groceries",
+        "quantity": 3,
+        "notes": "Get these by the end of the week",
+        "shareToken": null
+    }
+],
+"items": [
+    {
+        "id": 1,
+        "listId": 1,
+        "name": "apple",
+        "quantity": 2,
+        "notes": "",
+        "image": "/images/placeholder.png",
+        "addedAt": "2025-10-07T10:01:00Z"
     }
 ]
+
 }
