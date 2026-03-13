@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import { usersSlice } from '../features/usersSclice';
-// import other reducers...
+import authReducer from "./userSlice";
+import usersReducer from "../features/usersSlice";
 
 export const store = configureStore({
   reducer: {
-    // Add the reducer from each slice here
-    // users: usersSlice.reducer,
+    auth: authReducer,
+    users: usersReducer,
   },
-  // middleware and devTools are configured with good defaults automatically
 });
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

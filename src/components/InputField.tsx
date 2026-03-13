@@ -6,6 +6,8 @@ type Props = {
   icon?: string;
   label: string;
   placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
 };
 
 export const InputField: React.FC<Props> = ({
@@ -13,16 +15,22 @@ export const InputField: React.FC<Props> = ({
   icon,
   label,
   placeholder,
+  value = "",
+  onChange,
 }) => {
   return (
-    <>
-      <div className="flex flex-col">
-        <p className="text-[16px]">{label}</p>
-        <div tabIndex={0} className="flex border-1 gap-2 w-[434px]  h-[48px] focus:border-3">
-          <img src={icon} alt="" />
-          <input type={typeInput} placeholder={placeholder} className=" w-full focus:outline-none hover:bg-gray-100"/>
-        </div>
+    <div className="flex flex-col">
+      <p className="text-[16px]">{label}</p>
+      <div className="flex border border-gray-300 rounded-lg gap-2 w-[434px] h-[48px] px-3 focus-within:ring-2 focus-within:ring-black">
+        {icon && <img src={icon} alt="" className="w-5 h-5 self-center opacity-70" />}
+        <input
+          type={typeInput}
+          placeholder={placeholder}
+          value={value}
+          onChange={(e) => onChange?.(e.target.value)}
+          className="w-full focus:outline-none bg-transparent"
+        />
       </div>
-    </>
+    </div>
   );
 };
