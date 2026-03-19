@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 
@@ -15,7 +15,7 @@ export const Landing = () => {
         <Link to="/login">
           <button className="border-0 h-[250px] w-[250px] rounded-2xl overflow-hidden bg-white/10 hover:bg-white/20 transition flex items-center justify-center">
             {logoError ? (
-              <span className="text-8xl" aria-hidden>🛒</span>
+              <span className="text-white/60 text-sm">Logo</span>
             ) : (
               <img
                 src="/images/logo.png"

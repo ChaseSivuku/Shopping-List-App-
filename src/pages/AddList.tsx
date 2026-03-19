@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../store/store";
+import type { RootState } from "../store/store";
 import { addList, selectUserById } from "../features/usersSlice";
 
 export function AddList() {
@@ -56,7 +56,7 @@ export function AddList() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-black text-white py-4 px-6 flex justify-between items-center">
         <Link to="/home" className="text-xl font-bold">
-          🛒 Shopping List
+          Shopping List
         </Link>
         <nav className="flex gap-4">
           <Link to="/home" className="hover:underline">

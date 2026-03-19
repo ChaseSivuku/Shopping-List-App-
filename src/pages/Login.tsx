@@ -42,12 +42,13 @@ export const Login = () => {
 
   return (
     <>
+    {/* left half */}
       {loading && <Loader />}
       <div className="h-screen w-full flex">
         <div className="bg-black rounded-r-[15px] h-full w-[50%] flex flex-col justify-center items-center gap-10">
           <div className="h-[250px] w-[250px] flex items-center justify-center bg-white/5 rounded-2xl">
             {logoError ? (
-              <span className="text-8xl" aria-hidden>🛒</span>
+              <span className="text-white/60 text-sm">Logo</span>
             ) : (
               <img
                 src="/images/logo.png"
@@ -65,14 +66,14 @@ export const Login = () => {
             </p>
           </div>
         </div>
-
+{/* Right half */}
         <div className="bg-white h-full w-[50%] flex flex-col justify-center items-center gap-8">
           <h2 className="text-2xl font-bold text-gray-800">Login</h2>
           <form onSubmit={handleLogin} className="flex flex-col items-center gap-6">
             <InputField
               typeInput="email"
               label="Email:"
-              icon="/icons/email.png"
+              icon="/icons/icons8-email-50.png"
               placeholder="someone@example.com"
               value={email}
               onChange={setEmail}
@@ -80,7 +81,7 @@ export const Login = () => {
             <InputField
               typeInput="password"
               label="Password:"
-              icon="/icons/lock.png"
+              icon="/icons/padlock.png"
               placeholder="Enter your password"
               value={password}
               onChange={setPassword}

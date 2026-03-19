@@ -75,12 +75,13 @@ export function Register() {
           <InputField
             label="Email:"
             typeInput="email"
-            icon="/icons/email.png"
+            icon="/icons/icons8-email-50.png"
             placeholder="someone@example.com"
             value={form.email}
             onChange={(v) => handleChange("email", v)}
           />
           <InputField
+            icon="/icons/phone.png"
             label="Cell:"
             typeInput="tel"
             placeholder="082 123 4567"
@@ -90,7 +91,7 @@ export function Register() {
           <InputField
             label="Password:"
             typeInput="password"
-            icon="/icons/lock.png"
+            icon="/icons/padlock.png"
             placeholder="Choose a password"
             value={form.password}
             onChange={(v) => handleChange("password", v)}

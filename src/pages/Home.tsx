@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../store/store";
+import type { RootState } from "../store/store";
 import {
   addList,
   addItem,
@@ -91,7 +91,7 @@ export function Home() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-black text-white py-4 px-6 flex justify-between items-center">
         <Link to="/home" className="text-xl font-bold">
-          🛒 Shopping List
+          Shopping List
         </Link>
         <nav className="flex gap-4 items-center">
           <Link to="/home" className="hover:underline">
@@ -147,7 +147,7 @@ export function Home() {
                   className="bg-white rounded-xl shadow p-6 border border-gray-100"
                 >
                   <div className="flex justify-between items-center mb-4">
-                    <h3 className="text-lg font-medium">📝 {list.name}</h3>
+                    <h3 className="text-lg font-medium">{list.name}</h3>
                     <Link
                       to={`/edit-list/${encodeURIComponent(list.name)}`}
                       className="text-sm text-black underline"

@@ -1,7 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { RootState } from "../store/store";
+import type { RootState } from "../store/store";
 import { selectUserById } from "../features/usersSlice";
 
 export function Profile() {
@@ -25,7 +24,7 @@ export function Profile() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-black text-white py-4 px-6 flex justify-between items-center">
         <Link to="/home" className="text-xl font-bold">
-          🛒 Shopping List
+          Shopping List
         </Link>
         <nav className="flex gap-4">
           <Link to="/home" className="hover:underline">
@@ -60,7 +59,7 @@ export function Profile() {
             to="/home"
             className="inline-block mt-4 text-black underline hover:no-underline"
           >
-            ← Back to Home
+            Back to Home
           </Link>
         </div>
       </main>

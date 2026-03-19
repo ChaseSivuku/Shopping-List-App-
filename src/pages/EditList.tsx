@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../store/store";
+import type { RootState } from "../store/store";
 import {
   selectUserById,
   updateList,
@@ -105,7 +105,7 @@ export function EditList() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-black text-white py-4 px-6 flex justify-between items-center">
         <Link to="/home" className="text-xl font-bold">
-          🛒 Shopping List
+          Shopping List
         </Link>
         <nav className="flex gap-4">
           <Link to="/home" className="hover:underline">
@@ -119,7 +119,7 @@ export function EditList() {
 
       <main className="max-w-2xl mx-auto p-6">
         <Link to="/home" className="text-gray-600 hover:underline mb-4 inline-block">
-          ← Back to lists
+          Back to lists
         </Link>
 
         <form onSubmit={handleSaveList} className="bg-white rounded-xl shadow p-6 mb-6">
